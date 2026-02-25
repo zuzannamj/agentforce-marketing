@@ -93,9 +93,19 @@
   </a>
 </sectionr>
 
-  <footer>
-    © 2025 Zuzanna Jarczynska. Created by Zuzanna Jarczynska, Inspired by Salesforce.
-  </footer>
+<footer>
+  © <span id="year-range"></span> Zuzanna Jarczynska. Created by Zuzanna Jarczynska, Inspired by Salesforce.
+</footer>
+
+<script>
+  const startYear = 2025;
+  const currentYear = new Date().getFullYear();
+
+  document.getElementById("year-range").textContent =
+    currentYear > startYear
+      ? `${startYear}-${currentYear}`
+      : startYear;
+</script>
 
 </body>
 </html>
